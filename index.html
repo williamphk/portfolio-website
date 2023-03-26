@@ -4,16 +4,16 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>William Poon's Portfolio</title>
   </head>
   <body>
     <header>
+      <div class="site-name-and-logo">
+        <img class="logo" src="images/logo.png" alt="Website Logo" />
+        <h1 class="site-name">William Poon</h1>
+        <h2 class="description">Full Stack Web Developer</h2>
+      </div>
       <nav>
-        <div class="site-name-and-logo">
-          <img class="logo" src="images/logo.png" alt="Website Logo" />
-          <h1 class="site-name">William Poon</h1>
-          <h2 class="description">Full Stack Web Developer</h2>
-        </div>
         <div class="nav-link-and-icon">
           <div class="nav-link">
             <a href="#about">ABOUT</a>
@@ -53,7 +53,7 @@
           skills, and experiences. Thank you for visiting my website, and I look
           forward to connecting with you!
         </p>
-        <button><a href="#work">Check out my work!</a></button>
+        <a href="#work" class="button">Check out my work!</a>
       </section>
       <section class="work" id="work">
         <h3 class="section-title">Some Things I've Built</h3>
@@ -69,11 +69,12 @@
                 demonstrates the use of Webpack for module bundling and
                 organization.
               </p>
-              <button>
-                <a href="https://williamphk.github.io/odin_Battleship/"
-                  >Live Preview</a
-                >
-              </button>
+
+              <a
+                href="https://williamphk.github.io/odin_Battleship/"
+                class="button"
+                >Live Preview</a
+              >
             </div>
             <img
               src="images/Project1_desktop.png"
@@ -90,11 +91,12 @@
                 user interface that updates in real-time as users play the game,
                 such as the Score, Best score and the Level button.
               </p>
-              <button>
-                <a href="https://williamphk.github.io/odin_Memory-Card/"
-                  >Live Preview</a
-                >
-              </button>
+
+              <a
+                href="https://williamphk.github.io/odin_Memory-Card/"
+                class="button"
+                >Live Preview</a
+              >
             </div>
             <img
               src="images/Project2_desktop.png"
@@ -112,11 +114,12 @@
                 add functionality that clears the canvas and changes the color
                 of the drawing line.
               </p>
-              <button>
-                <a href="https://williamphk.github.io/odin_Etch-A-Sketch/"
-                  >Live Preview</a
-                >
-              </button>
+
+              <a
+                href="https://williamphk.github.io/odin_Etch-A-Sketch/"
+                class="button"
+                >Live Preview</a
+              >
             </div>
             <img
               src="images/Project3_desktop.png"
@@ -132,14 +135,14 @@
           <img src="images/mail.png" alt="a email icon" />
           <a href="mailto:willphk@outlook.com">willphk@outlook.com</a>
         </div>
-        <div class="right-column">
+        <form class="right-column">
           <label for="name">Name:</label>
           <input type="text" id="name" name="name" />
           <label for="email">Email:</label>
           <input type="email" id="email" name="email" />
           <label for="message">Message:</label>
           <textarea name="message" id="message" cols="30" rows="10"></textarea>
-        </div>
+        </form>
       </section>
     </main>
     <footer>
