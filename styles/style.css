@@ -9,8 +9,8 @@
 body {
   background-color: #2b3467;
   font-family: "Inter", sans-serif;
-  padding-left: min(8em, 8vw);
-  padding-right: min(8em, 8vw);
+  padding-left: clamp(2em, 10vw, 9em);
+  padding-right: clamp(2em, 10vw, 9em);
 }
 
 a {
@@ -169,7 +169,7 @@ section:last-child::after {
 
 .project-description {
   color: #bad7e9;
-  font-size: min(20px, 2vw);
+  font-size: min(20px, 1.3vw);
 }
 
 .live-preview-button {
@@ -194,7 +194,7 @@ section:last-child::after {
   position: relative;
   left: 4em;
   z-index: -1;
-  width: min(50vw, 671px);
+  width: min(55vw, 671px);
   height: auto;
 }
 
