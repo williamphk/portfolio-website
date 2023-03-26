@@ -5,13 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>William Poon's Portfolio</title>
+    <link rel="stylesheet" href="styles/style.css" />
   </head>
   <body>
     <header>
       <div class="site-name-and-logo">
-        <img class="logo" src="images/logo.png" alt="Website Logo" />
-        <h1 class="site-name">William Poon</h1>
-        <h2 class="description">Full Stack Web Developer</h2>
+        <img
+          class="logo"
+          src="images/logo.png"
+          alt="Website Logo"
+          width="45px"
+          height="45px"
+        />
+        <div class="site-name-and-job-title">
+          <h1 class="site-name">William Poon</h1>
+          <h2 class="job-title">Full Stack Web Developer</h2>
+        </div>
       </div>
       <nav>
         <div class="nav-link-and-icon">
@@ -21,16 +30,22 @@
             <a href="#contact">CONTACT</a>
           </div>
           <div class="nav-icon">
-            <img
-              class="github"
-              src="images/github.png"
-              alt="William Poon's Github profile"
-            />
-            <img
-              class="linkedin"
-              src="images/linkedin.png"
-              alt="William Poon's LinkedIn profile"
-            />
+            <a href="https://github.com/williamphk"
+              ><img
+                class="github"
+                src="images/github.png"
+                alt="William Poon's Github profile"
+                height="35px"
+                width="35px"
+            /></a>
+            <a href="https://www.linkedin.com/in/williamphk"
+              ><img
+                class="linkedin"
+                src="images/linkedin.png"
+                alt="William Poon's LinkedIn profile"
+                height="30px"
+                width="30px"
+            /></a>
           </div>
         </div>
       </nav>
@@ -38,9 +53,9 @@
     <main>
       <section class="about" id="about">
         <h3 class="section-title">About me</h3>
-        <p>Hi! My name is</p>
-        <p>William Poon</p>
-        <p>
+        <p class="self-introduction">Hi! My name is</p>
+        <p class="my-name">William Poon</p>
+        <p class="self-introduction">
           I am studying Web Development at Humber College, Toronto, Canada,
           where I have been learning and refining my skills in various
           programming languages, frameworks, and tools. I have a unique
@@ -48,101 +63,135 @@
           creating impactful digital experiences led me to pursue a career in
           web development.
         </p>
-        <p>
+        <p class="self-introduction">
           I invite you to explore my portfolio and learn more about my projects,
           skills, and experiences. Thank you for visiting my website, and I look
           forward to connecting with you!
         </p>
-        <a href="#work" class="button">Check out my work!</a>
+        <a href="#work" class="about-section-button">Check out my work!</a>
       </section>
       <section class="work" id="work">
         <h3 class="section-title">Some Things I've Built</h3>
         <div class="project">
           <article class="project-one">
             <div class="project-introduction">
-              <h4 class="project-title">The Battleship</h4>
-              <p class="project-description">
-                This project is a recreation of the classic board game
-                Battleship using HTML, CSS, and JavaScript. It allows users to
-                place ships on a game board and take turns guessing the
-                locations of their opponent's ships. The project also
-                demonstrates the use of Webpack for module bundling and
-                organization.
-              </p>
+              <div>
+                <div class="featured-project-label">Featured Project</div>
+                <h4 class="project-title">The Battleship</h4>
+              </div>
+              <div class="project-description-and-live-preview-button">
+                <p class="project-description">
+                  This project is a recreation of the classic board game
+                  Battleship using HTML, CSS, and JavaScript. It allows users to
+                  place ships on a game board and take turns guessing the
+                  locations of their opponent's ships. The project also
+                  demonstrates the use of Webpack for module bundling and
+                  organization.
+                </p>
 
-              <a
-                href="https://williamphk.github.io/odin_Battleship/"
-                class="button"
-                >Live Preview</a
-              >
+                <a
+                  href="https://williamphk.github.io/odin_Battleship/"
+                  class="live-preview-button"
+                  >Live Preview</a
+                >
+              </div>
             </div>
             <img
+              class="project-image"
               src="images/Project1_desktop.png"
               alt="A screenshot of the Battleship project"
+              width="671px"
+              height="388px"
             />
           </article>
           <article class="project-two">
             <div class="project-introduction">
-              <h4 class="project-title">Memory Game</h4>
-              <p class="project-description">
-                This is a fun and challenging memory game where players click on
-                a set of buttons with emojis but without clicking on the same
-                button twice. With React Hooks, I was able to create a dynamic
-                user interface that updates in real-time as users play the game,
-                such as the Score, Best score and the Level button.
-              </p>
-
-              <a
-                href="https://williamphk.github.io/odin_Memory-Card/"
-                class="button"
-                >Live Preview</a
-              >
+              <div>
+                <div class="featured-project-label">Featured Project</div>
+                <h4 class="project-title">Memory Game</h4>
+              </div>
+              <div class="project-description-and-live-preview-button">
+                <p class="project-description">
+                  This is a fun and challenging memory game where players click
+                  on a set of buttons with emojis but without clicking on the
+                  same button twice. With React Hooks, I was able to create a
+                  dynamic user interface that updates in real-time as users play
+                  the game, such as the Score, Best score and the Level button.
+                </p>
+                <a
+                  href="https://williamphk.github.io/odin_Memory-Card/"
+                  class="live-preview-button"
+                  >Live Preview</a
+                >
+              </div>
             </div>
             <img
+              class="project-image"
               src="images/Project2_desktop.png"
               alt="A screenshot of the Memory Game project"
+              width="671px"
+              height="388px"
             />
           </article>
           <article class="project-three">
             <div class="project-introduction">
-              <h4 class="project-title">Etch-a-sketch</h4>
-              <p class="project-description">
-                Introducing my Etch-a-sketch project, a fun and interactive
-                drawing application built with HTML, CSS, and JavaScript. It
-                allows users to create their own digital art by drawing on a
-                virtual canvas with the cursor. With JavaScript, I was able to
-                add functionality that clears the canvas and changes the color
-                of the drawing line.
-              </p>
-
-              <a
-                href="https://williamphk.github.io/odin_Etch-A-Sketch/"
-                class="button"
-                >Live Preview</a
-              >
+              <div>
+                <div class="featured-project-label">Featured Project</div>
+                <h4 class="project-title">Etch-a-sketch</h4>
+              </div>
+              <div class="project-description-and-live-preview-button">
+                <p class="project-description">
+                  Introducing my Etch-a-sketch project, a fun and interactive
+                  drawing application built with HTML, CSS, and JavaScript. It
+                  allows users to create their own digital art by drawing on a
+                  virtual canvas with the cursor. With JavaScript, I was able to
+                  add functionality that clears the canvas and changes the color
+                  of the drawing line.
+                </p>
+                <a
+                  href="https://williamphk.github.io/odin_Etch-A-Sketch/"
+                  class="live-preview-button"
+                  >Live Preview</a
+                >
+              </div>
             </div>
             <img
+              class="project-image"
               src="images/Project3_desktop.png"
               alt="A screenshot of the Etch-a-sketch project"
+              width="671px"
+              height="388px"
             />
           </article>
         </div>
       </section>
       <section class="contact" id="contact">
         <h3 class="section-title">Contact</h3>
-        <div class="left-column">
-          <div>Got a issue?</div>
-          <img src="images/mail.png" alt="a email icon" />
-          <a href="mailto:willphk@outlook.com">willphk@outlook.com</a>
+        <div class="column-wrapper">
+          <div class="left-column">
+            <div>Got a issue?</div>
+            <div class="email-wrapper">
+              <img
+                class="email-icon"
+                src="images/mail.png"
+                alt="a email icon"
+                width="37px"
+                height="37px"
+              />
+              <a class="my-email" href="mailto:willphk@outlook.com"
+                >willphk@outlook.com</a
+              >
+            </div>
+          </div>
+          <form class="right-column">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" />
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" />
+            <label for="message">Message:</label>
+            <textarea name="message" id="message" cols="30" rows="5"></textarea>
+          </form>
         </div>
-        <form class="right-column">
-          <label for="name">Name:</label>
-          <input type="text" id="name" name="name" />
-          <label for="email">Email:</label>
-          <input type="email" id="email" name="email" />
-          <label for="message">Message:</label>
-          <textarea name="message" id="message" cols="30" rows="10"></textarea>
-        </form>
       </section>
     </main>
     <footer>

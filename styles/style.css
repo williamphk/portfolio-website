@@ -1,0 +1,296 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Poiret+One&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #2b3467;
+  font-family: "Inter", sans-serif;
+  padding-left: min(8em, 8vw);
+  padding-right: min(8em, 8vw);
+}
+
+a {
+  text-decoration: none;
+}
+
+/* HEADER */
+header,
+.site-name-and-logo,
+nav,
+.nav-link-and-icon,
+.nav-link,
+.nav-icon {
+  display: flex;
+  color: #fcffe7;
+  align-items: center;
+}
+
+header {
+  height: 105px;
+  justify-content: space-between;
+}
+
+.logo {
+  position: absolute;
+  top: 2em;
+  left: 4em;
+}
+
+.nav-link-and-icon,
+.nav-link {
+  gap: 2em;
+}
+
+.nav-icon {
+  gap: 1em;
+}
+
+.nav-link a {
+  color: #fcffe7;
+  font-size: 20px;
+}
+
+.nav-link a:hover {
+  color: #64ffda;
+}
+
+.site-name,
+.job-title {
+  font-family: "Poiret One", cursive;
+}
+
+.site-name {
+  font-size: 32px;
+}
+
+.job-title {
+  font-size: 20px;
+}
+
+/* MAIN */
+section {
+  padding: 45px 0px;
+}
+
+section::after {
+  content: "";
+  display: block;
+  position: relative;
+  left: -8em;
+  bottom: -3.5em;
+  width: 100vw;
+  border-bottom: 2px dashed #eb455f;
+}
+
+section:last-child::after {
+  border-bottom: 0px dashed #eb455f;
+}
+
+.section-title {
+  color: #ffffff;
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 32px;
+}
+
+/* ABOUT */
+.self-introduction {
+  color: #bad7e9;
+  font-size: 20px;
+}
+
+.my-name {
+  color: #fcffe7;
+  font-size: 40px;
+}
+
+.about p:nth-child(4),
+.about p:nth-child(5) {
+  margin-top: 1em;
+}
+
+.about-section-button {
+  display: block;
+  width: 266px;
+  height: 66px;
+  color: #fcffe7;
+  text-align: center;
+  line-height: 60px;
+  border: 3px solid #64ffda;
+  border-radius: 10px;
+  margin-top: 36px;
+  font-size: 20px;
+}
+
+.about-section-button:hover {
+  color: #000000;
+  background-color: #64ffda;
+}
+
+/* WORK */
+.project {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.project-introduction {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1em;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.featured-project-label {
+  font-size: 14px;
+  color: #64ffda;
+}
+
+.project-title {
+  color: #ffffff;
+  font-size: 28px;
+}
+
+.project-description-and-live-preview-button {
+  width: min(502px, 30vw);
+  height: min(255px, auto);
+  background-color: #42487e;
+  padding: 0.7em 1.5em;
+}
+
+.project-description-and-live-preview-button:hover .project-description {
+  color: #faff00;
+}
+
+.project-description {
+  color: #bad7e9;
+  font-size: min(20px, 2vw);
+}
+
+.live-preview-button {
+  color: #fcffe7;
+  display: block;
+  width: 117px;
+  height: 39px;
+  border-radius: 10px;
+  text-align: center;
+  line-height: 35px;
+  border: 2px #fcffe7 solid;
+  font-size: 14px;
+  margin-top: 18px;
+}
+
+.project-description-and-live-preview-button:hover .live-preview-button {
+  background-color: #fcffe7;
+  color: #000000;
+}
+
+.project-image {
+  position: relative;
+  left: 4em;
+  z-index: -1;
+  width: min(50vw, 671px);
+  height: auto;
+}
+
+.project-two .project-image {
+  left: -4em;
+}
+
+.project-one,
+.project-two {
+  margin-bottom: 43px;
+}
+
+.project-one,
+.project-three {
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+}
+
+.project-two {
+  display: flex;
+  align-items: center;
+}
+
+/* CONTACT */
+.column-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.left-column {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  position: relative;
+  left: 5em;
+  color: #fcffe7;
+  top: -2.5em;
+  font-size: 20px;
+}
+
+.email-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.email-icon {
+  position: absolute;
+  left: -3em;
+}
+
+.my-email {
+  color: #fcffe7;
+}
+
+.right-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.right-column label {
+  font-size: 16px;
+  color: #ffffff;
+}
+
+.right-column input {
+  width: 429px;
+  height: 41px;
+  margin-bottom: 39px;
+  border: 0px;
+  border-radius: 4px;
+  margin-top: 0.5em;
+}
+
+.right-column textarea {
+  border: 0px;
+  border-radius: 4px;
+  margin-top: 0.5em;
+}
+
+footer {
+  height: 79px;
+  font-size: 20px;
+  color: #ffffff;
+  line-height: 79px;
+  display: flex;
+  justify-content: space-between;
+}
+
+footer a {
+  color: #ffffff;
+}
+
+@media only screen and (max-width: 768px) {
+  body {
+    padding: 0 4em;
+  }
+}
