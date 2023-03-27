@@ -147,13 +147,13 @@ section:last-child::after {
 }
 
 .featured-project-label {
-  font-size: 14px;
+  font-size: min(28px, 1.1vw);
   color: #64ffda;
 }
 
 .project-title {
   color: #ffffff;
-  font-size: 28px;
+  font-size: min(28px, 2.3vw);
 }
 
 .project-description-and-live-preview-button {
@@ -262,7 +262,7 @@ section:last-child::after {
 }
 
 .right-column input {
-  width: 429px;
+  width: min(429px, 40vw);
   height: 41px;
   margin-bottom: 39px;
   border: 0px;
@@ -291,6 +291,102 @@ footer a {
 
 @media only screen and (max-width: 768px) {
   body {
-    padding: 0 4em;
+    padding: 0 3em;
+  }
+  /* HEADER */
+  .site-name-and-job-title {
+    display: none;
+  }
+
+  /* WORK */
+  .project-one .project-image {
+    display: none;
+  }
+
+  .project-two .project-image {
+    display: none;
+  }
+
+  .project-three .project-image {
+    display: none;
+  }
+
+  .project-one,
+  .project-two,
+  .project-three {
+    width: 688px;
+    height: 398px;
+  }
+
+  .project-one {
+    background-image: url("../images/Project1_tablet.png");
+    background-size: contain;
+  }
+  .project-two {
+    background-image: url("../images/Project2_tablet.png");
+    background-size: contain;
+  }
+  .project-three {
+    background-image: url("../images/Project3_tablet.png");
+    background-size: contain;
+  }
+  .project-one .project-description-and-live-preview-button {
+    background-color: #42487e00;
+  }
+  .project-two .project-description-and-live-preview-button {
+    background-color: #42487e00;
+  }
+  .project-three .project-description-and-live-preview-button {
+    background-color: #42487e00;
+  }
+  .featured-project-label {
+    font-size: 14px;
+  }
+  .project-title {
+    font-size: 32px;
+  }
+  .project-description-and-live-preview-button {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .project-description {
+    font-size: 20px;
+  }
+
+  /* CONTACT */
+  .column-wrapper {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .right-column {
+    justify-content: center;
+  }
+  .right-column input {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  /* HEADER */
+  .nav-link-and-icon {
+    display: none;
+  }
+
+  /* WORK */
+  .project-description {
+    font-size: 14px;
+  }
+  .project-one,
+  .project-two,
+  .project-three {
+    width: 280px;
+    height: 388px;
+  }
+
+  /* CONTACT */
+  .left-column {
+    font-size: 14px;
   }
 }
