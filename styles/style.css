@@ -76,15 +76,15 @@ section {
   padding: 45px 0px;
 }
 
-section::after {
+/* section::after {
   content: "";
   display: block;
   position: relative;
   left: -8em;
   bottom: -3.5em;
-  width: 100vw;
+  width: 122%;
   border-bottom: 2px dashed #eb455f;
-}
+} */
 
 section:last-child::after {
   border-bottom: 0px dashed #eb455f;
@@ -289,6 +289,7 @@ footer a {
   color: #ffffff;
 }
 
+/* TABLET */
 @media only screen and (max-width: 768px) {
   body {
     padding: 0 3em;
@@ -359,6 +360,11 @@ footer a {
   .column-wrapper {
     flex-direction: column;
     align-items: stretch;
+    gap: 1em;
+  }
+  .left-column {
+    left: 3em;
+    top: 0;
   }
   .right-column {
     justify-content: center;
@@ -368,9 +374,38 @@ footer a {
   }
 }
 
+/* PHONE */
 @media only screen and (max-width: 320px) {
+  body {
+    padding: 0 1.5em;
+  }
+
   /* HEADER */
+  .logo {
+    position: static;
+  }
   .nav-link-and-icon {
+    display: none;
+  }
+
+  /* MAIN */
+  .section-title {
+    font-size: 24px;
+  }
+  section {
+    padding-top: 0;
+  }
+
+  /* ABOUT*/
+  .self-introduction {
+    font-size: 14px;
+  }
+
+  .my-name {
+    font-size: 20px;
+  }
+
+  .about-section-button {
     display: none;
   }
 
@@ -378,15 +413,37 @@ footer a {
   .project-description {
     font-size: 14px;
   }
+  .project-title {
+    font-size: 24px;
+  }
+  .featured-project-label {
+    font-size: 10px;
+  }
+  .project-introduction {
+    gap: 0;
+  }
   .project-one,
   .project-two,
   .project-three {
     width: 280px;
     height: 388px;
+    background-size: auto;
   }
 
   /* CONTACT */
+  .column-wrapper {
+    gap: 3em;
+  }
   .left-column {
     font-size: 14px;
+  }
+  /* FOOTER */
+  footer {
+    height: 94px;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 1em;
+    font-size: 14px;
+    line-height: normal;
   }
 }
