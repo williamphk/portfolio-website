@@ -527,6 +527,7 @@ footer a {
   }
   .my-name {
     font-size: 20px;
+    font-weight: 400;
   }
   .about-section-button {
     display: none;
