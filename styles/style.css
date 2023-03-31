@@ -118,6 +118,7 @@ section:last-child::after {
 .my-name {
   color: #fcffe7;
   font-size: 40px;
+  font-weight: 400;
 }
 
 .about p:nth-child(4),
@@ -527,7 +528,6 @@ footer a {
   }
   .my-name {
     font-size: 20px;
-    font-weight: 400;
   }
   .about-section-button {
     display: none;
