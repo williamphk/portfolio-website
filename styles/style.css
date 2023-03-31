@@ -3,14 +3,21 @@
 * {
   margin: 0;
   padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
   box-sizing: border-box;
 }
 
 body {
   background-color: #2b3467;
   font-family: "Inter", sans-serif;
-  padding-left: clamp(2em, 10vw, 9em);
-  padding-right: clamp(2em, 10vw, 9em);
 }
 
 a {
@@ -32,12 +39,14 @@ nav,
 header {
   height: 105px;
   justify-content: space-between;
+  padding-left: clamp(2em, 10vw, 9em);
+  padding-right: clamp(2em, 10vw, 9em);
 }
 
 .logo {
   position: absolute;
   top: 2em;
-  left: 4em;
+  left: min(4%, 4em);
 }
 
 .nav-link-and-icon,
@@ -58,6 +67,10 @@ header {
   color: #64ffda;
 }
 
+.menu-toggle {
+  display: none;
+}
+
 .site-name,
 .job-title {
   font-family: "Poiret One", cursive;
@@ -74,6 +87,13 @@ header {
 /* MAIN */
 section {
   padding: 45px 0px;
+  padding-left: clamp(2em, 10vw, 9em);
+  padding-right: clamp(2em, 10vw, 9em);
+}
+
+section:nth-child(1),
+section:nth-child(2) {
+  border-bottom: #eb455f 1px dashed;
 }
 
 /* section::after {
@@ -158,9 +178,37 @@ section:last-child::after {
 
 .project-description-and-live-preview-button {
   width: min(502px, 30vw);
-  height: min(255px, auto);
+  height: 255px;
   background-color: #42487e;
   padding: 0.7em 1.5em;
+}
+
+.project-description-and-live-preview-button:hover {
+  position: relative;
+}
+
+.project-one .project-description-and-live-preview-button:hover::before {
+  content: "\00a0";
+  display: block;
+  float: left;
+  position: absolute;
+  height: 100%;
+  background-color: #42487e;
+  left: -2em;
+  width: 2em;
+  top: -0.1px;
+}
+
+.project-one .project-description-and-live-preview-button:hover::before {
+  content: "\00a0";
+  display: block;
+  float: left;
+  position: absolute;
+  height: 100%;
+  background-color: #42487e;
+  left: -2em;
+  width: 2em;
+  top: -0.1px;
 }
 
 .project-description-and-live-preview-button:hover .project-description {
@@ -283,6 +331,8 @@ footer {
   line-height: 79px;
   display: flex;
   justify-content: space-between;
+  padding-left: clamp(2em, 10vw, 9em);
+  padding-right: clamp(2em, 10vw, 9em);
 }
 
 footer a {
@@ -291,34 +341,45 @@ footer a {
 
 /* TABLET */
 @media only screen and (max-width: 768px) {
-  body {
-    padding: 0 3em;
-  }
   /* HEADER */
+  header {
+    padding-left: clamp(1em, 6vw, 6em);
+    padding-right: clamp(1em, 6vw, 6em);
+  }
   .site-name-and-job-title {
     display: none;
+  }
+  .logo {
+    position: static;
+  }
+  .nav-link-and-icon,
+  .nav-link {
+    gap: min(2em, 4.15vw);
+  }
+
+  /* MAIN */
+  section {
+    padding-left: clamp(1em, 6vw, 6em);
+    padding-right: clamp(1em, 6vw, 6em);
   }
 
   /* WORK */
   .project-one .project-image {
     display: none;
   }
-
   .project-two .project-image {
     display: none;
   }
-
   .project-three .project-image {
     display: none;
   }
-
   .project-one,
   .project-two,
   .project-three {
-    width: 688px;
-    height: 398px;
+    width: min(688px, 100%);
+    height: min(398px, 100%);
+    padding: 2em 0;
   }
-
   .project-one {
     background-image: url("../images/Project1_tablet.png");
     background-size: contain;
@@ -359,8 +420,8 @@ footer a {
   /* CONTACT */
   .column-wrapper {
     flex-direction: column;
-    align-items: stretch;
-    gap: 1em;
+    align-items: flex-start;
+    gap: 2em;
   }
   .left-column {
     left: 3em;
@@ -368,31 +429,88 @@ footer a {
   }
   .right-column {
     justify-content: center;
+    align-self: stretch;
   }
   .right-column input {
     width: 100%;
+  }
+
+  /* FOOTER */
+  footer {
+    padding-left: clamp(1em, 6vw, 6em);
+    padding-right: clamp(1em, 6vw, 6em);
+    font-size: min(20px, 120%);
+  }
+}
+
+/* ADDITIONAL BREAKPOINT FOR FOOTER*/
+@media only screen and (max-width: 692px) {
+  footer {
+    height: 94px;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 1em;
+    line-height: normal;
+  }
+}
+
+/* ADDITIONAL BREAKPOINT FOR FOOTER*/
+@media only screen and (max-width: 463px) {
+  .nav-link-and-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0;
+  }
+  .nav-link {
+    gap: 3vw;
+  }
+  section {
+    padding-top: 25px;
+    padding-bottom: 25px;
   }
 }
 
 /* PHONE */
 @media only screen and (max-width: 320px) {
-  body {
-    padding: 0 1.5em;
-  }
-
   /* HEADER */
   .logo {
     position: static;
   }
   .nav-link-and-icon {
-    display: none;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    height: 0;
+    overflow: hidden;
+    background-color: #0f264f;
+    top: 5.5em;
+    transition: height 2s;
+    gap: 2em;
+  }
+  .menu-button {
+    display: block;
+  }
+  .show-menu {
+    height: 100%;
+    z-index: 1;
+  }
+  .nav-link {
+    flex-direction: column;
+    width: 100%;
+    gap: 2em;
+    padding-top: 2em;
+  }
+  .nav-icon {
+    width: 100%;
+    justify-content: center;
   }
 
   /* MAIN */
   .section-title {
     font-size: 24px;
   }
-  section {
+  section:first-child {
     padding-top: 0;
   }
 
@@ -425,8 +543,8 @@ footer a {
   .project-one,
   .project-two,
   .project-three {
-    width: 280px;
-    height: 388px;
+    width: min(280px, 100%);
+    height: min(388px, 100%);
     background-size: auto;
   }
 
