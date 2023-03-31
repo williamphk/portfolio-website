@@ -1,5 +1,7 @@
+/* Importing Google Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Poiret+One&display=swap");
 
+/* Resetting margins and padding */
 * {
   margin: 0;
   padding: 0;
@@ -96,16 +98,6 @@ section:nth-child(2) {
   border-bottom: #eb455f 1px dashed;
 }
 
-/* section::after {
-  content: "";
-  display: block;
-  position: relative;
-  left: -8em;
-  bottom: -3.5em;
-  width: 122%;
-  border-bottom: 2px dashed #eb455f;
-} */
-
 section:last-child::after {
   border-bottom: 0px dashed #eb455f;
 }
@@ -183,11 +175,11 @@ section:last-child::after {
   padding-top: 0;
 }
 
+/* Animation for projects */
 .animation-left,
 .animation-right {
   height: -moz-available;
   height: -webkit-fill-available;
-  height: fill-available;
   background-color: #42487e;
   width: 2em;
   position: absolute;
@@ -209,6 +201,7 @@ section:last-child::after {
 .show-animation-left {
   left: -25px;
 }
+
 .show-animation-right {
   right: -25px;
 }
@@ -327,6 +320,7 @@ section:last-child::after {
   margin-top: 0.5em;
 }
 
+/* FOOTER */
 footer {
   height: 79px;
   font-size: 20px;
@@ -419,7 +413,14 @@ footer a {
   .project-description {
     font-size: 20px;
   }
-  .animation {
+  .live-preview-button {
+    width: 117px;
+    height: 39px;
+    font-size: 14px;
+    line-height: 34px;
+  }
+  .animation-left,
+  .animation-right {
     display: none;
   }
 
@@ -449,7 +450,7 @@ footer a {
   }
 }
 
-/* ADDITIONAL BREAKPOINT FOR FOOTER*/
+/* ADDITIONAL BREAKPOINT FOR FOOTER */
 @media only screen and (max-width: 692px) {
   footer {
     height: 94px;
@@ -460,7 +461,7 @@ footer a {
   }
 }
 
-/* ADDITIONAL BREAKPOINT FOR FOOTER*/
+/* ADDITIONAL BREAKPOINT FOR FOOTER */
 @media only screen and (max-width: 463px) {
   .nav-link-and-icon {
     display: flex;
@@ -481,7 +482,7 @@ footer a {
 @media only screen and (max-width: 320px) {
   /* HEADER */
   .logo {
-    position: static;
+    display: static;
   }
   .nav-link-and-icon {
     position: absolute;
@@ -494,11 +495,11 @@ footer a {
     transition: height 2s;
     gap: 2em;
   }
-  .menu-button {
+  .menu-toggle {
     display: block;
   }
   .show-menu {
-    height: 100%;
+    height: calc(100vh - 90px);
     z-index: 1;
   }
   .nav-link {
@@ -524,11 +525,9 @@ footer a {
   .self-introduction {
     font-size: 14px;
   }
-
   .my-name {
     font-size: 20px;
   }
-
   .about-section-button {
     display: none;
   }
@@ -539,12 +538,15 @@ footer a {
   }
   .project-title {
     font-size: 24px;
+    width: 7em;
   }
   .featured-project-label {
     font-size: 10px;
   }
   .project-introduction {
     gap: 0;
+    align-items: flex-start;
+    padding: 0 1.5em;
   }
   .project-one,
   .project-two,
@@ -552,6 +554,10 @@ footer a {
     width: min(280px, 100%);
     height: min(388px, 100%);
     background-size: auto;
+  }
+  .project-description-and-live-preview-button{
+    padding: 0;
+    width: 100%;
   }
 
   /* CONTACT */
@@ -561,6 +567,7 @@ footer a {
   .left-column {
     font-size: 14px;
   }
+
   /* FOOTER */
   footer {
     height: 94px;
