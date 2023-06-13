@@ -110,6 +110,9 @@ section:last-child::after {
 }
 
 /* ABOUT */
+.about {
+  height: calc(100vh - 105px);
+}
 .self-introduction {
   color: #bad7e9;
   font-size: 20px;
