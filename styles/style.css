@@ -480,7 +480,7 @@ footer a {
 }
 
 /* PHONE */
-@media only screen and (max-width: 320px) {
+@media only screen and (max-width: 400px) {
   /* HEADER */
   .logo {
     display: static;
@@ -556,7 +556,7 @@ footer a {
     height: min(388px, 100%);
     background-size: auto;
   }
-  .project-description-and-live-preview-button{
+  .project-description-and-live-preview-button {
     padding: 0;
     width: 100%;
   }
