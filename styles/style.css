@@ -128,6 +128,7 @@ section {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 55%;
 }
 
 .project-wrapper {
@@ -185,7 +186,7 @@ section {
 }
 
 .image-wrapper {
-  background-color: #666666;
+  background-image: url("../images/project-background.jpg");
   display: flex;
   align-items: center;
   height: 99vh;
