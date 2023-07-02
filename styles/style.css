@@ -188,12 +188,12 @@ section {
   background-color: #666666;
   display: flex;
   align-items: center;
-  height: 100vh;
+  height: 99vh;
   border-radius: 25px;
   width: 70%;
   padding: 0px 20px;
   position: sticky;
-  top: 0;
+  top: 5px;
 }
 
 .project-image {
@@ -226,6 +226,10 @@ footer a {
 
 /* TABLET */
 @media only screen and (max-width: 768px) {
+  body {
+    flex-direction: column;
+  }
+
   /* HEADER */
   .nav-link {
     gap: min(2em, 4.15vw);
@@ -254,18 +258,7 @@ footer a {
     height: min(398px, 100%);
     padding: 2em 0;
   }
-  .project-one {
-    background-image: url("../images/Project1_tablet.png");
-    background-size: contain;
-  }
-  .project-two {
-    background-image: url("../images/Project2_tablet.png");
-    background-size: contain;
-  }
-  .project-three {
-    background-image: url("../images/Project3_tablet.png");
-    background-size: contain;
-  }
+
   .project-one .project-description-and-live-preview-button {
     background-color: #42487e00;
   }
