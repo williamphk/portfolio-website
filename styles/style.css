@@ -74,6 +74,7 @@ section {
 }
 
 .section-title {
+  padding-left: clamp(1em, 2vw, 2em);
   color: #000000;
   font-size: 32px;
   font-weight: 700;
@@ -143,8 +144,8 @@ section {
   overflow-y: clip;
   height: 100vh;
   justify-content: center;
-  width: 50%;
-  padding-left: clamp(1em, 4vw, 4em);
+  width: 100%;
+  padding-left: clamp(1em, 2vw, 2em);
 }
 
 .project-title {
@@ -153,12 +154,8 @@ section {
 }
 
 .project-description-and-live-preview-button {
-  width: min(502px, 30vw);
   padding-top: 0;
-}
-
-.project-description-and-live-preview-button:hover .project-description {
-  color: #000000;
+  padding-right: clamp(1em, 2vw, 2em);
 }
 
 .project-description {
@@ -180,7 +177,7 @@ section {
   margin-top: 18px;
 }
 
-.project-description-and-live-preview-button:hover .live-preview-button {
+.live-preview-button:hover {
   background-color: #000000;
   color: #ffffff;
 }
@@ -256,7 +253,6 @@ footer a {
   .project-two,
   .project-three {
     width: min(688px, 100%);
-    height: min(398px, 100%);
     padding: 2em 0;
   }
 
@@ -290,9 +286,17 @@ footer a {
     font-size: 14px;
     line-height: 34px;
   }
-  .animation-left,
-  .animation-right {
+  .image-wrapper {
     display: none;
+  }
+  .project {
+    width: 100%;
+  }
+  .project-introduction,
+  .project-introduction > * {
+    align-items: center;
+    padding: 0;
+    height: auto;
   }
 
   /* FOOTER */
@@ -385,7 +389,7 @@ footer a {
   .project-two,
   .project-three {
     width: min(280px, 100%);
-    height: min(388px, 100%);
+    height: auto;
     background-size: auto;
   }
   .project-description-and-live-preview-button {
@@ -402,9 +406,4 @@ footer a {
     font-size: 14px;
     line-height: normal;
   }
-}
-
-.srcoll {
-  background-color: red;
-  transition: all 1s;
 }
