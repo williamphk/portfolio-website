@@ -317,8 +317,8 @@ footer a {
   .project-image-tablet {
     display: block;
     width: 100vw;
-    padding-left: 25px;
-    padding-right: 25px;
+    padding-left: 7px;
+    padding-right: 7px;
   }
 
   /* FOOTER */
@@ -329,60 +329,40 @@ footer a {
   }
 }
 
-/* ADDITIONAL BREAKPOINT FOR FOOTER */
-@media only screen and (max-width: 692px) {
-  footer {
-    height: 94px;
-    flex-direction: column;
-    justify-content: flex-start;
-    gap: 1em;
-    line-height: normal;
-  }
-}
-
-/* ADDITIONAL BREAKPOINT FOR FOOTER */
-@media only screen and (max-width: 463px) {
-  .nav-link {
-    gap: 3vw;
-  }
-  section {
-    padding-top: 25px;
-    padding-bottom: 25px;
-  }
-}
-
 /* PHONE */
 @media only screen and (max-width: 400px) {
   /* HEADER */
   .menu-toggle {
     display: block;
   }
+
   .show-menu {
-    height: calc(100vh - 85px);
+    height: calc(100vh - 45px) !important;
     z-index: 1;
+  }
+  nav {
+    padding: 5px;
+    display: flex;
+    align-items: end;
   }
   .nav-link {
     flex-direction: column;
     width: 100%;
     gap: 2em;
-    padding-top: 2em;
-  }
-  .nav-icon {
-    width: 100%;
-    justify-content: center;
+    height: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 50px;
+    transition: height 2s;
   }
 
   /* MAIN */
   section {
-    padding-right: 0;
-    padding-left: 0;
+    padding: 10px 0;
   }
   .section-title {
     font-size: 24px;
     margin-bottom: 0;
-  }
-  section:first-child {
-    padding-top: 0;
   }
 
   /* ABOUT*/
@@ -399,6 +379,7 @@ footer a {
   /* WORK */
   .project-description {
     font-size: 14px;
+    padding: 5px 25px;
   }
   .project-title {
     font-size: 24px;
@@ -409,8 +390,6 @@ footer a {
   }
   .project-introduction {
     gap: 0;
-    align-items: flex-start;
-    padding: 0 1.5em;
   }
   .project-one,
   .project-two,

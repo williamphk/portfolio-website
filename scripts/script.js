@@ -1,11 +1,14 @@
 // Toggle Menu for mobile
-// let toggle = document.querySelector(".menu-toggle");
-// toggle.onclick = toggleMenu;
+let toggle = document.querySelector(".menu-toggle");
+let links = document.querySelectorAll(".link");
+toggle.onclick = toggleMenu;
+links.forEach((el) => el.addEventListener("click", toggleMenu));
 
-// function toggleMenu() {
-//   let menu = document.querySelector(".nav-link-and-icon");
-//   menu.classList.toggle("show-menu");
-// }
+function toggleMenu() {
+  let menu = document.querySelector(".nav-link");
+  console.log(menu);
+  menu.classList.toggle("show-menu");
+}
 
 // Scroll Animation
 let intersectingImageArray = [];
