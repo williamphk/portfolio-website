@@ -165,9 +165,10 @@ section {
 }
 
 .live-preview-button {
+  padding: 0 25px;
   color: #000000;
   display: block;
-  width: min(117px, 10vw);
+  min-width: min(117px, 10vw);
   height: min(39px, 3.5vw);
   border-radius: 10px;
   text-align: center;
@@ -209,6 +210,11 @@ section {
 
 .project-image-tablet {
   display: none;
+}
+
+.project-button-wrapper {
+  display: flex;
+  gap: 25px;
 }
 
 /* FOOTER */
