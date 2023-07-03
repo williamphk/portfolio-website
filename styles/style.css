@@ -322,10 +322,9 @@ footer a {
     font-size: 20px;
   }
   .live-preview-button {
-    width: 117px;
-    height: 39px;
+    width: auto;
+    height: auto;
     font-size: 14px;
-    line-height: 34px;
   }
   .image-wrapper {
     display: none;
@@ -344,6 +343,10 @@ footer a {
     width: 100vw;
     padding-left: 7px;
     padding-right: 7px;
+  }
+  .project-button-wrapper {
+    flex-direction: column;
+    gap: 0;
   }
   .hidden {
     transform: translateX(0);
@@ -468,6 +471,9 @@ footer a {
   .project-description-and-live-preview-button {
     padding: 0;
     width: 100%;
+  }
+  .live-preview-button {
+    font-size: 10px;
   }
 
   /* FOOTER */
