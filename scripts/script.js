@@ -17,11 +17,14 @@ const observer = new IntersectionObserver((entries) => {
     const projectWrapper =
       entry.target.parentElement.parentElement.parentElement.parentElement
         .parentElement;
+    const projectIntroduction = entry.target.parentElement.parentElement;
+    entry.target.parentElement.parentElement.parentElement;
     const imageWrapper = projectWrapper.querySelector(".image-wrapper");
     const imageElements = imageWrapper.querySelectorAll("img");
     const imageID = entry.target.getAttribute("data-img");
 
     if (entry.isIntersecting) {
+      projectIntroduction.classList.add("show");
       if (!intersectingImageArray.includes(imageID)) {
         intersectingImageArray.push(imageID);
       }
