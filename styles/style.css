@@ -191,7 +191,7 @@ section {
 }
 
 .image-wrapper {
-  background-image: url("../images/project-background.jpg");
+  background-image: url("../images/project-background.webp");
   display: flex;
   align-items: center;
   height: 99vh;
