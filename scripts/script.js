@@ -1,12 +1,11 @@
 // Toggle Menu for mobile
 let toggle = document.querySelector(".menu-toggle");
 let links = document.querySelectorAll(".link");
-toggle.onclick = toggleMenu;
+toggle.addEventListener("click", toggleMenu);
 links.forEach((el) => el.addEventListener("click", toggleMenu));
 
 function toggleMenu() {
   let menu = document.querySelector(".nav-link");
-  console.log(menu);
   menu.classList.toggle("show-menu");
 }
 

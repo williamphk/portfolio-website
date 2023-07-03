@@ -330,10 +330,15 @@ footer a {
 }
 
 /* PHONE */
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 410px) {
   /* HEADER */
   .menu-toggle {
     display: block;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    padding: 0;
   }
 
   .show-menu {
@@ -341,7 +346,7 @@ footer a {
     z-index: 1;
   }
   nav {
-    padding: 5px;
+    padding: 5px 0;
     display: flex;
     align-items: end;
   }
@@ -354,6 +359,40 @@ footer a {
     position: absolute;
     top: 50px;
     transition: height 2s;
+  }
+  .line {
+    fill: none;
+    stroke: black;
+    stroke-width: 6;
+    transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+      stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .line1 {
+    stroke-dasharray: 60 207;
+    stroke-width: 6;
+  }
+  .line2 {
+    stroke-dasharray: 60 60;
+    stroke-width: 6;
+  }
+  .line3 {
+    stroke-dasharray: 60 207;
+    stroke-width: 6;
+  }
+  .opened .line1 {
+    stroke-dasharray: 90 207;
+    stroke-dashoffset: -134;
+    stroke-width: 6;
+  }
+  .opened .line2 {
+    stroke-dasharray: 1 60;
+    stroke-dashoffset: -30;
+    stroke-width: 6;
+  }
+  .opened .line3 {
+    stroke-dasharray: 90 207;
+    stroke-dashoffset: -134;
+    stroke-width: 6;
   }
 
   /* MAIN */
