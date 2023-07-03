@@ -18,22 +18,35 @@ const observer = new IntersectionObserver((entries) => {
       entry.target.parentElement.parentElement.parentElement.parentElement
         .parentElement;
     const imageWrapper = projectWrapper.querySelector(".image-wrapper");
-    const imageElement = imageWrapper.querySelector("img");
-    const imageUrl = entry.target.getAttribute("data-img");
+    const imageElements = imageWrapper.querySelectorAll("img");
+    const imageID = entry.target.getAttribute("data-img");
 
     if (entry.isIntersecting) {
-      if (!intersectingImageArray.includes(imageUrl)) {
-        intersectingImageArray.push(imageUrl);
+      if (!intersectingImageArray.includes(imageID)) {
+        intersectingImageArray.push(imageID);
       }
-      imageElement.src = imageUrl;
+      imageElements.forEach((el, index) => {
+        if (index == imageID) {
+          el.style.display = "block";
+        } else {
+          el.style.display = "none";
+        }
+      });
     } else {
-      const index = intersectingImageArray.indexOf(imageUrl);
+      const index = intersectingImageArray.indexOf(imageID);
       if (index > -1) {
         intersectingImageArray.splice(index, 1);
       }
       if (intersectingImageArray.length > 0) {
-        imageElement.src =
-          intersectingImageArray[intersectingImageArray.length - 1];
+        imageElements.forEach((el, index) => {
+          if (
+            index == intersectingImageArray[intersectingImageArray.length - 1]
+          ) {
+            el.style.display = "block";
+          } else {
+            el.style.display = "none";
+          }
+        });
       }
     }
   });
