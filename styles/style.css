@@ -360,6 +360,14 @@ footer a {
   }
 }
 
+/* ADDITION BREAKPOINT FOR FOOTER */
+@media only screen and (max-width: 630px) {
+  footer {
+    flex-direction: column;
+    line-height: normal;
+  }
+}
+
 /* PHONE */
 @media only screen and (max-width: 410px) {
   /* HEADER */
