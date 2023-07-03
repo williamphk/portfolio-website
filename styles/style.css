@@ -83,7 +83,7 @@ section {
 
 /* ABOUT */
 .about {
-  height: calc(55vh);
+  height: auto;
   background-image: url("../images/about-background.png");
   border-radius: 25px;
   margin: 5px;
@@ -197,6 +197,7 @@ section {
 .project-image {
   height: auto;
   width: 100%;
+  border-radius: 25px;
 }
 
 .project-one,
@@ -204,6 +205,10 @@ section {
 .project-three {
   display: flex;
   width: 100%;
+}
+
+.project-image-tablet {
+  display: none;
 }
 
 /* FOOTER */
@@ -223,20 +228,31 @@ footer a {
 }
 
 /* TABLET */
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1200px) {
   body {
     flex-direction: column;
   }
 
   /* HEADER */
+  nav {
+    padding: 15px 0;
+  }
   .nav-link {
     gap: min(2em, 4.15vw);
+    flex-direction: row;
   }
 
   /* MAIN */
   section {
-    padding-left: clamp(1em, 2vw, 2em);
-    padding-right: clamp(1em, 7vw, 7em);
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  /* ABOUT */
+  .about {
+    padding-left: clamp(1em, 4vw, 4em);
+    padding-right: clamp(1em, 4vw, 4em);
+    height: auto;
   }
 
   /* WORK */
@@ -297,6 +313,12 @@ footer a {
     align-items: center;
     padding: 0;
     height: auto;
+  }
+  .project-image-tablet {
+    display: block;
+    width: 100vw;
+    padding-left: 25px;
+    padding-right: 25px;
   }
 
   /* FOOTER */
