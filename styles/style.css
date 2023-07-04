@@ -397,7 +397,7 @@ footer a {
     overflow: hidden;
     position: absolute;
     top: 50px;
-    transition: height 2s;
+    transition: height 0.7s;
   }
   .line {
     fill: none;
