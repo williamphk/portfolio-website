@@ -363,6 +363,11 @@ footer a {
     transform: translateX(0);
   }
 
+  /* CONTACT */
+  .contact > p {
+    font-size: 20px;
+  }
+
   /* FOOTER */
   footer {
     padding-left: clamp(1em, 2vw, 2em);
@@ -495,6 +500,11 @@ footer a {
     font-size: 14px;
     padding: 10px;
     width: 120px;
+  }
+
+  /* CONTACT */
+  .contact > p {
+    font-size: 14px;
   }
 
   /* FOOTER */
