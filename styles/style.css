@@ -172,14 +172,11 @@ section {
 }
 
 .live-preview-button {
-  padding: 0 25px;
+  padding: 10px 25px;
   color: var(--primaryColor);
   display: block;
-  min-width: min(117px, 10vw);
-  height: min(39px, 3.5vw);
   border-radius: 10px;
   text-align: center;
-  line-height: min(35px, 3.2vw);
   border: 2px var(--primaryColor) solid;
   font-size: min(14px, 1.1vw);
   margin-top: 18px;
