@@ -354,6 +354,7 @@ footer a {
     width: 100vw;
     padding-left: 7px;
     padding-right: 7px;
+    border-radius: 25px;
   }
   .project-button-wrapper {
     flex-direction: column;
@@ -364,7 +365,8 @@ footer a {
   }
 
   /* CONTACT */
-  .contact > p {
+  .contact > p,
+  .contact > div {
     font-size: 20px;
   }
 
@@ -503,7 +505,8 @@ footer a {
   }
 
   /* CONTACT */
-  .contact > p {
+  .contact > p,
+  .contact > div {
     font-size: 14px;
   }
 
