@@ -57,3 +57,26 @@ const observer = new IntersectionObserver((entries) => {
 
 const observeElements = document.querySelectorAll(".intersecting-element");
 observeElements.forEach((el) => observer.observe(el));
+
+const imageElements = document.querySelectorAll(".project-image");
+const imageElementsTablet = document.querySelectorAll(".project-image-tablet");
+const hover = document.querySelectorAll(".hover");
+const imageSrcArray = [
+  "images/Register.gif",
+  "images/OAuth.gif",
+  "images/Post.gif",
+  "images/Friend.gif",
+  "images/Profile.gif",
+];
+
+for (let i = 0; i < imageElements.length; i++) {
+  for (let j = 0; j < hover.length; j++) {
+    hover[j].addEventListener("mouseover", changeSource);
+    hover[j].addEventListener("click", changeSource);
+
+    function changeSource(e) {
+      imageElements[i].src = imageSrcArray[j];
+      imageElementsTablet[i].src = imageSrcArray[j];
+    }
+  }
+}
