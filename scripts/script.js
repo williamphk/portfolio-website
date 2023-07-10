@@ -76,7 +76,7 @@ for (let i = 0; i < imageElements.length; i++) {
     const originalSrc1 = imageElements[i].src;
 
     hover[j].addEventListener("mouseover", changeSource);
-    hoverWrapper[j].addEventListener("mouseleave", changeSource);
+    hoverWrapper[0].addEventListener("mouseleave", changeSource);
     hover[j].addEventListener("click", changeSource);
 
     function changeSource(e) {
