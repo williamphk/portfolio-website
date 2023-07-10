@@ -60,30 +60,54 @@ observeElements.forEach((el) => observer.observe(el));
 
 const imageElements = document.querySelectorAll(".project-image");
 const imageElementsTablet = document.querySelectorAll(".project-image-tablet");
-const hover = document.querySelectorAll(".hover");
-const hoverWrapper = document.querySelectorAll(".hover-wrapper");
+const hover1 = document.querySelectorAll(".hover1");
+const hoverWrapper1 = document.querySelectorAll(".hover-wrapper1");
+const hover3 = document.querySelectorAll(".hover3");
+const hoverWrapper3 = document.querySelectorAll(".hover-wrapper3");
 
-const imageSrcArray = [
+const imageSrcArray1 = [
   "images/Register.gif",
   "images/OAuth.gif",
   "images/Post.gif",
   "images/Friend.gif",
   "images/Profile.gif",
 ];
+const imageSrcArray3 = [
+  "images/Drag-n-drop.gif",
+  "images/Click.gif",
+  "images/Restart.gif",
+];
 
 for (let i = 0; i < imageElements.length; i++) {
-  for (let j = 0; j < hover.length; j++) {
-    const originalSrc1 = imageElements[i].src;
+  if (i == 0) {
+    for (let j = 0; j < hover1.length; j++) {
+      const originalSrc = imageElements[i].src;
 
-    hover[j].addEventListener("mouseover", changeSource);
-    hoverWrapper[0].addEventListener("mouseleave", changeSource);
-    hover[j].addEventListener("click", changeSource);
+      hover1[j].addEventListener("mouseover", changeSource);
+      hoverWrapper1[0].addEventListener("mouseleave", changeSource);
+      hover1[j].addEventListener("click", changeSource);
 
-    function changeSource(e) {
-      e.type === "mouseover"
-        ? (imageElements[i].src = imageSrcArray[j])
-        : (imageElements[i].src = originalSrc1);
-      imageElementsTablet[i].src = imageSrcArray[j];
+      function changeSource(e) {
+        e.type === "mouseover"
+          ? (imageElements[i].src = imageSrcArray1[j])
+          : (imageElements[i].src = originalSrc);
+        imageElementsTablet[i].src = imageSrcArray1[j];
+      }
+    }
+  } else if (i == 2) {
+    for (let j = 0; j < hover3.length; j++) {
+      const originalSrc = imageElements[i].src;
+
+      hover3[j].addEventListener("mouseover", changeSource);
+      hoverWrapper3[0].addEventListener("mouseleave", changeSource);
+      hover3[j].addEventListener("click", changeSource);
+
+      function changeSource(e) {
+        e.type === "mouseover"
+          ? (imageElements[i].src = imageSrcArray3[j])
+          : (imageElements[i].src = originalSrc);
+        imageElementsTablet[i].src = imageSrcArray3[j];
+      }
     }
   }
 }
