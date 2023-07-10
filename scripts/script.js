@@ -61,6 +61,7 @@ observeElements.forEach((el) => observer.observe(el));
 const imageElements = document.querySelectorAll(".project-image");
 const imageElementsTablet = document.querySelectorAll(".project-image-tablet");
 const hover = document.querySelectorAll(".hover");
+
 const imageSrcArray = [
   "images/Register.gif",
   "images/OAuth.gif",
@@ -71,11 +72,16 @@ const imageSrcArray = [
 
 for (let i = 0; i < imageElements.length; i++) {
   for (let j = 0; j < hover.length; j++) {
+    const originalSrc1 = imageElements[i].src;
+
     hover[j].addEventListener("mouseover", changeSource);
+    hover[j].addEventListener("mouseleave", changeSource);
     hover[j].addEventListener("click", changeSource);
 
     function changeSource(e) {
-      imageElements[i].src = imageSrcArray[j];
+      e.type === "mouseover"
+        ? (imageElements[i].src = imageSrcArray[j])
+        : (imageElements[i].src = originalSrc1);
       imageElementsTablet[i].src = imageSrcArray[j];
     }
   }
