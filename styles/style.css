@@ -478,6 +478,8 @@ footer a {
   .section-title {
     font-size: 24px;
     margin-bottom: 0;
+    text-align: center;
+    padding-left: 0;
   }
 
   /* ABOUT*/
@@ -498,7 +500,6 @@ footer a {
   }
   .project-title {
     font-size: 24px;
-    width: 7em;
   }
   .featured-project-label {
     font-size: 10px;
