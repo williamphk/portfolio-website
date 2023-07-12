@@ -76,6 +76,7 @@ const hover3 = document.querySelectorAll(".hover3");
 const hoverWrapper3 = document.querySelectorAll(".hover-wrapper3");
 const videoTablet = document.querySelectorAll(".video-tablet");
 const videoTabletSource = document.querySelectorAll(".video-tablet-source");
+const materialSymbol = document.querySelectorAll(".material-symbols-outlined");
 
 const videoSrcArray1 = [
   "videos/Project_1/Register.mp4",
@@ -97,15 +98,22 @@ for (let i = 0; i < imageElements.length; i++) {
     for (let j = 0; j < hover1.length; j++) {
       hover1[j].addEventListener("click", changeToVideo);
 
-      function changeToVideo() {
+      function changeToVideo(e) {
+        materialSymbol.forEach((el) => (el.innerHTML = "play_circle"));
+        e.target.children[0]
+          ? (e.target.children[0].innerHTML = "stop_circle")
+          : (e.target.innerHTML = "stop_circle");
         imageElements[i].style.display = "none";
         video.style.display = "block";
         source.src = videoSrcArray1[j];
         video.load();
         video.play();
-        video.width = 800;
-        video.height = 500;
+        video.width = window.innerWidth / 2 - 40;
+        video.height = ((window.innerWidth / 2 - 40) * 9) / 16;
         imageWrapperElements[0].appendChild(video);
+        video.addEventListener("ended", function () {
+          e.target.children[0].innerHTML = "play_circle";
+        });
 
         imageElementsTablet[i].style.display = "none";
         videoTabletSource[i].src = videoSrcArray1[j];
@@ -114,21 +122,31 @@ for (let i = 0; i < imageElements.length; i++) {
         videoTablet[i].load();
         videoTablet[i].play();
         if (mediaQueryTablet.matches) videoTablet[i].style.display = "block";
+        videoTablet[i].addEventListener("ended", function () {
+          e.target.children[0].innerHTML = "play_circle";
+        });
       }
     }
   } else if (i == 2) {
     for (let j = 0; j < hover3.length; j++) {
       hover3[j].addEventListener("click", changeToVideo);
 
-      function changeToVideo() {
+      function changeToVideo(e) {
+        console.log(e.target);
+        materialSymbol.forEach((el) => (el.innerHTML = "play_circle"));
+        if (e.target.children[0])
+          e.target.children[0].innerHTML = "stop_circle";
         imageElements[i].style.display = "none";
         video.style.display = "block";
         source.src = videoSrcArray3[j];
         video.load();
         video.play();
-        video.width = 800;
-        video.height = 500;
+        video.width = window.innerWidth / 2 - 40;
+        video.height = ((window.innerWidth / 2 - 40) * 9) / 16;
         imageWrapperElements[0].appendChild(video);
+        video.addEventListener("ended", function () {
+          e.target.children[0].innerHTML = "play_circle";
+        });
 
         imageElementsTablet[i].style.display = "none";
         videoTabletSource[i].src = videoSrcArray3[j];
@@ -137,6 +155,9 @@ for (let i = 0; i < imageElements.length; i++) {
         videoTablet[i].load();
         videoTablet[i].play();
         if (mediaQueryTablet.matches) videoTablet[i].style.display = "block";
+        videoTablet[i].addEventListener("ended", function () {
+          e.target.children[0].innerHTML = "play_circle";
+        });
       }
     }
   }
