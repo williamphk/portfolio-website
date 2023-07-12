@@ -112,7 +112,9 @@ for (let i = 0; i < imageElements.length; i++) {
         video.height = ((window.innerWidth / 2 - 40) * 9) / 16;
         imageWrapperElements[0].appendChild(video);
         video.addEventListener("ended", function () {
-          e.target.children[0].innerHTML = "play_circle";
+          e.target.children[0]
+            ? (e.target.children[0].innerHTML = "play_circle")
+            : (e.target.innerHTML = "play_circle");
         });
 
         imageElementsTablet[i].style.display = "none";
@@ -123,7 +125,9 @@ for (let i = 0; i < imageElements.length; i++) {
         videoTablet[i].play();
         if (mediaQueryTablet.matches) videoTablet[i].style.display = "block";
         videoTablet[i].addEventListener("ended", function () {
-          e.target.children[0].innerHTML = "play_circle";
+          e.target.children[0]
+            ? (e.target.children[0].innerHTML = "play_circle")
+            : (e.target.innerHTML = "play_circle");
         });
       }
     }
@@ -145,7 +149,9 @@ for (let i = 0; i < imageElements.length; i++) {
         video.height = ((window.innerWidth / 2 - 40) * 9) / 16;
         imageWrapperElements[0].appendChild(video);
         video.addEventListener("ended", function () {
-          e.target.children[0].innerHTML = "play_circle";
+          e.target.children[0]
+            ? (e.target.children[0].innerHTML = "play_circle")
+            : (e.target.innerHTML = "play_circle");
         });
 
         imageElementsTablet[i].style.display = "none";
@@ -156,7 +162,9 @@ for (let i = 0; i < imageElements.length; i++) {
         videoTablet[i].play();
         if (mediaQueryTablet.matches) videoTablet[i].style.display = "block";
         videoTablet[i].addEventListener("ended", function () {
-          e.target.children[0].innerHTML = "play_circle";
+          e.target.children[0]
+            ? (e.target.children[0].innerHTML = "play_circle")
+            : (e.target.innerHTML = "play_circle");
         });
       }
     }
