@@ -222,18 +222,6 @@ section {
   gap: 25px;
 }
 
-/* Animations */
-.fade {
-  animation-name: fade;
-  animation-duration: 0.7s;
-}
-.hidden {
-  transform: translateX(-100%);
-  transition: all 0.7s;
-}
-.show {
-  transform: translateX(0);
-}
 .hover-wrapper1,
 .hover-wrapper3 {
   display: flex;
@@ -259,6 +247,22 @@ section {
 .hover1:hover,
 .hover3:hover {
   background-color: #d1d1d1;
+}
+.video-tablet {
+  display: none;
+}
+
+/* Animations */
+.fade {
+  animation-name: fade;
+  animation-duration: 0.7s;
+}
+.hidden {
+  transform: translateX(-100%);
+  transition: all 0.7s;
+}
+.show {
+  transform: translateX(0);
 }
 
 @keyframes fade {

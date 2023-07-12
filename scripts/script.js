@@ -1,7 +1,5 @@
 let video = document.createElement("video");
 
-video.setAttribute("width", "800");
-video.setAttribute("height", "500");
 video.setAttribute("controls", "");
 
 let source = document.createElement("source");
@@ -76,6 +74,8 @@ const hover1 = document.querySelectorAll(".hover1");
 const hoverWrapper1 = document.querySelectorAll(".hover-wrapper1");
 const hover3 = document.querySelectorAll(".hover3");
 const hoverWrapper3 = document.querySelectorAll(".hover-wrapper3");
+const videoTablet = document.querySelectorAll(".video-tablet");
+const videoTabletSource = document.querySelectorAll(".video-tablet-source");
 
 const videoSrcArray1 = [
   "videos/Project_1/Register.mp4",
@@ -90,6 +90,8 @@ const videoSrcArray3 = [
   "videos/Project_3/Restart.mp4",
 ];
 
+const mediaQueryTablet = window.matchMedia("(max-width: 1200px)");
+
 for (let i = 0; i < imageElements.length; i++) {
   if (i == 0) {
     for (let j = 0; j < hover1.length; j++) {
@@ -99,11 +101,19 @@ for (let i = 0; i < imageElements.length; i++) {
         imageElements[i].style.display = "none";
         video.style.display = "block";
         source.src = videoSrcArray1[j];
-        video.load(); // Load the new video source
-        video.play(); // Play the video
+        video.load();
+        video.play();
+        video.width = 800;
+        video.height = 500;
         imageWrapperElements[0].appendChild(video);
 
         imageElementsTablet[i].style.display = "none";
+        videoTabletSource[i].src = videoSrcArray1[j];
+        videoTablet[i].width = window.innerWidth;
+        videoTablet[i].height = (window.innerWidth * 9) / 16;
+        videoTablet[i].load();
+        videoTablet[i].play();
+        if (mediaQueryTablet.matches) videoTablet[i].style.display = "block";
       }
     }
   } else if (i == 2) {
@@ -114,12 +124,28 @@ for (let i = 0; i < imageElements.length; i++) {
         imageElements[i].style.display = "none";
         video.style.display = "block";
         source.src = videoSrcArray3[j];
-        video.load(); // Load the new video source
-        video.play(); // Play the video
+        video.load();
+        video.play();
+        video.width = 800;
+        video.height = 500;
         imageWrapperElements[0].appendChild(video);
 
         imageElementsTablet[i].style.display = "none";
+        videoTabletSource[i].src = videoSrcArray3[j];
+        videoTablet[i].width = window.innerWidth;
+        videoTablet[i].height = (window.innerWidth * 9) / 16;
+        videoTablet[i].load();
+        videoTablet[i].play();
+        if (mediaQueryTablet.matches) videoTablet[i].style.display = "block";
       }
     }
   }
 }
+
+window.addEventListener("resize", function () {
+  for (let i = 0; i < imageElements.length; i++) {
+    if (!mediaQueryTablet.matches) videoTablet[i].style.display = "none";
+    videoTablet[i].width = window.innerWidth;
+    videoTablet[i].height = (window.innerWidth * 9) / 16;
+  }
+});
