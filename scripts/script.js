@@ -1,3 +1,13 @@
+let video = document.createElement("video");
+
+video.setAttribute("width", "800");
+video.setAttribute("height", "500");
+video.setAttribute("controls", "");
+
+let source = document.createElement("source");
+source.setAttribute("type", "video/mp4");
+video.appendChild(source);
+
 // Toggle Menu for mobile
 let toggle = document.querySelector(".menu-toggle");
 let links = document.querySelectorAll(".link");
@@ -25,6 +35,7 @@ const observer = new IntersectionObserver((entries) => {
 
     if (entry.isIntersecting) {
       projectIntroduction.classList.add("show");
+      video.style.display = "none";
       if (!intersectingImageArray.includes(imageID)) {
         intersectingImageArray.push(imageID);
       }
@@ -59,54 +70,55 @@ const observeElements = document.querySelectorAll(".intersecting-element");
 observeElements.forEach((el) => observer.observe(el));
 
 const imageElements = document.querySelectorAll(".project-image");
+const imageWrapperElements = document.querySelectorAll(".image-wrapper");
 const imageElementsTablet = document.querySelectorAll(".project-image-tablet");
 const hover1 = document.querySelectorAll(".hover1");
 const hoverWrapper1 = document.querySelectorAll(".hover-wrapper1");
 const hover3 = document.querySelectorAll(".hover3");
 const hoverWrapper3 = document.querySelectorAll(".hover-wrapper3");
 
-const imageSrcArray1 = [
-  "images/Register.gif",
-  "images/OAuth.gif",
-  "images/Post.gif",
-  "images/Friend.gif",
-  "images/Profile.gif",
+const videoSrcArray1 = [
+  "videos/Project_1/Register.mp4",
+  "videos/Project_1/OAuth.mp4",
+  "videos/Project_1/Post.mp4",
+  "videos/Project_1/Friend.mp4",
+  "videos/Project_1/Profile.mp4",
 ];
-const imageSrcArray3 = [
-  "images/Drag-n-drop.gif",
-  "images/Click.gif",
-  "images/Restart.gif",
+const videoSrcArray3 = [
+  "videos/Project_3/Drag-n-drop.mp4",
+  "videos/Project_3/Click.mp4",
+  "videos/Project_3/Restart.mp4",
 ];
 
 for (let i = 0; i < imageElements.length; i++) {
   if (i == 0) {
     for (let j = 0; j < hover1.length; j++) {
-      const originalSrc = imageElements[i].src;
+      hover1[j].addEventListener("click", changeToVideo);
 
-      hover1[j].addEventListener("mouseover", changeSource);
-      hoverWrapper1[0].addEventListener("mouseleave", changeSource);
-      hover1[j].addEventListener("click", changeSource);
+      function changeToVideo() {
+        imageElements[i].style.display = "none";
+        video.style.display = "block";
+        source.src = videoSrcArray1[j];
+        video.load(); // Load the new video source
+        video.play(); // Play the video
+        imageWrapperElements[0].appendChild(video);
 
-      function changeSource(e) {
-        e.type === "mouseover"
-          ? (imageElements[i].src = imageSrcArray1[j])
-          : (imageElements[i].src = originalSrc);
-        imageElementsTablet[i].src = imageSrcArray1[j];
+        imageElementsTablet[i].style.display = "none";
       }
     }
   } else if (i == 2) {
     for (let j = 0; j < hover3.length; j++) {
-      const originalSrc = imageElements[i].src;
+      hover3[j].addEventListener("click", changeToVideo);
 
-      hover3[j].addEventListener("mouseover", changeSource);
-      hoverWrapper3[0].addEventListener("mouseleave", changeSource);
-      hover3[j].addEventListener("click", changeSource);
+      function changeToVideo() {
+        imageElements[i].style.display = "none";
+        video.style.display = "block";
+        source.src = videoSrcArray3[j];
+        video.load(); // Load the new video source
+        video.play(); // Play the video
+        imageWrapperElements[0].appendChild(video);
 
-      function changeSource(e) {
-        e.type === "mouseover"
-          ? (imageElements[i].src = imageSrcArray3[j])
-          : (imageElements[i].src = originalSrc);
-        imageElementsTablet[i].src = imageSrcArray3[j];
+        imageElementsTablet[i].style.display = "none";
       }
     }
   }

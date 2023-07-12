@@ -191,6 +191,7 @@ section {
   background-image: url("../images/project-background.webp");
   display: flex;
   align-items: center;
+  justify-content: center;
   height: 99vh;
   border-radius: 25px;
   width: 70%;
@@ -243,10 +244,17 @@ section {
 }
 .hover1,
 .hover3 {
-  padding: 20px;
+  padding: 15px;
   background-color: #ececec;
   border-radius: 10px;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.hover1 > span,
+.hover3 > span {
+  font-size: 30px;
 }
 .hover1:hover,
 .hover3:hover {
