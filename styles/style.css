@@ -2,6 +2,8 @@
   --primaryColor: #000000;
   --secondaryColor: #333333;
   --tertiaryColor: #f6f6f6;
+  --bodyFontDesktop: 20px;
+  --bodyFontPhone: 14px;
 }
 
 /* Resetting margins and padding */
@@ -63,7 +65,7 @@ nav {
 
 .nav-link a {
   color: var(--primaryColor);
-  font-size: 20px;
+  font-size: var(--bodyFontDesktop);
 }
 
 .nav-link a:hover {
@@ -99,7 +101,7 @@ section {
 }
 .self-introduction {
   color: var(--secondaryColor);
-  font-size: 20px;
+  font-size: var(--bodyFontDesktop);
 }
 
 .my-name {
@@ -123,7 +125,7 @@ section {
   border: 3px solid var(--secondaryColor);
   border-radius: 10px;
   margin-top: 36px;
-  font-size: 20px;
+  font-size: var(--bodyFontDesktop);
 }
 
 .about-section-button:hover {
@@ -167,7 +169,7 @@ section {
 
 .project-description {
   color: var(--primaryColor);
-  font-size: min(20px, 1.4vw);
+  font-size: min(var(--bodyFontDesktop), 1.4vw);
   padding-top: 0.7em;
 }
 
@@ -283,7 +285,7 @@ section {
 }
 .contact > p,
 .contact > div {
-  font-size: min(20px, 1.4vw);
+  font-size: min(var(--bodyFontDesktop), 1.4vw);
   padding-left: clamp(1em, 2vw, 2em);
   padding-right: clamp(1em, 2vw, 2em);
 }
@@ -291,7 +293,7 @@ section {
 /* FOOTER */
 footer {
   height: 79px;
-  font-size: 20px;
+  font-size: var(--bodyFontDesktop);
   color: var(--primaryColor);
   line-height: 79px;
   display: flex;
@@ -418,7 +420,7 @@ footer a {
 }
 
 /* PHONE */
-@media only screen and (max-width: 410px) {
+@media only screen and (max-width: 415px) {
   /* HEADER */
   .menu-toggle {
     display: block;
@@ -496,7 +498,7 @@ footer a {
 
   /* ABOUT*/
   .self-introduction {
-    font-size: 14px;
+    font-size: var(--bodyFontPhone);
   }
   .my-name {
     font-size: 20px;
@@ -507,7 +509,7 @@ footer a {
 
   /* WORK */
   .project-description {
-    font-size: 14px;
+    font-size: var(--bodyFontPhone);
     padding: 5px 25px;
   }
   .project-title {
@@ -531,19 +533,24 @@ footer a {
     width: 100%;
   }
   .live-preview-button {
-    font-size: 14px;
+    font-size: var(--bodyFontPhone);
     padding: 10px;
     width: 120px;
   }
   .hover1,
   .hover3 {
     margin: 0 7px;
+    padding: 12px;
+  }
+  svg {
+    width: 40px;
+    height: 40px;
   }
 
   /* CONTACT */
   .contact > p,
   .contact > div {
-    font-size: 14px;
+    font-size: var(--bodyFontPhone);
   }
 
   /* FOOTER */
@@ -552,7 +559,7 @@ footer a {
     flex-direction: column;
     justify-content: flex-start;
     gap: 1em;
-    font-size: 14px;
+    font-size: var(--bodyFontPhone);
     line-height: normal;
   }
 }
