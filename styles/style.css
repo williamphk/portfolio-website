@@ -532,10 +532,12 @@ footer a {
     padding: 0;
     width: 100%;
   }
+  .project-button-wrapper {
+    width: 50%;
+  }
   .live-preview-button {
     font-size: var(--bodyFontPhone);
     padding: 10px;
-    width: 120px;
   }
   .hover1,
   .hover3 {
