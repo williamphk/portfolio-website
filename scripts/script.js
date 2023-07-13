@@ -136,10 +136,10 @@ for (let i = 0; i < imageElements.length; i++) {
       hover3[j].addEventListener("click", changeToVideo);
 
       function changeToVideo(e) {
-        console.log(e.target);
         materialSymbol.forEach((el) => (el.innerHTML = "play_circle"));
-        if (e.target.children[0])
-          e.target.children[0].innerHTML = "stop_circle";
+        e.target.children[0]
+          ? (e.target.children[0].innerHTML = "stop_circle")
+          : (e.target.innerHTML = "stop_circle");
         imageElements[i].style.display = "none";
         video.style.display = "block";
         source.src = videoSrcArray3[j];
