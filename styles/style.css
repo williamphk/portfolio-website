@@ -376,6 +376,7 @@ footer a {
     width: auto;
     height: auto;
     font-size: 14px;
+    justify-content: space-between;
   }
   .image-wrapper {
     display: none;
