@@ -99,7 +99,9 @@ for (let i = 0; i < imageElements.length; i++) {
       hover1[j].addEventListener("click", changeToVideo);
 
       function changeToVideo(e) {
-        materialSymbol.forEach((el) => (el.innerHTML = "play_circle"));
+        materialSymbol.forEach((el) => {
+          if (el.innerHTML === "stop_circle") el.innerHTML = "play_circle";
+        });
         e.target.children[0]
           ? (e.target.children[0].innerHTML = "stop_circle")
           : (e.target.innerHTML = "stop_circle");
@@ -136,7 +138,9 @@ for (let i = 0; i < imageElements.length; i++) {
       hover3[j].addEventListener("click", changeToVideo);
 
       function changeToVideo(e) {
-        materialSymbol.forEach((el) => (el.innerHTML = "play_circle"));
+        materialSymbol.forEach((el) => {
+          if (el.innerHTML === "stop_circle") el.innerHTML = "play_circle";
+        });
         e.target.children[0]
           ? (e.target.children[0].innerHTML = "stop_circle")
           : (e.target.innerHTML = "stop_circle");
