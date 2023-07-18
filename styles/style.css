@@ -174,7 +174,7 @@ section {
 }
 
 .live-preview-button {
-  padding: 10px 25px;
+  padding: 10px 10px;
   color: var(--primaryColor);
   display: block;
   border-radius: 10px;
@@ -182,6 +182,13 @@ section {
   border: 2px var(--primaryColor) solid;
   font-size: min(14px, 1.1vw);
   margin-top: 18px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.live-preview-button > .material-symbols-outlined {
+  font-size: 20px;
 }
 
 .live-preview-button:hover {
