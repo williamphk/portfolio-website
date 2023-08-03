@@ -1,8 +1,8 @@
 :root {
   --primaryColor: #000000;
-  --secondaryColor: #333333;
+  --secondaryColor: #000000;
   --tertiaryColor: #f6f6f6;
-  --bodyFontDesktop: 20px;
+  --bodyFontDesktop: 22px;
   --bodyFontPhone: 14px;
 }
 
@@ -92,26 +92,39 @@ section {
 
 /* ABOUT */
 .about {
-  height: auto;
-  background-image: url("../images/about-background.png");
+  height: 80vh;
   border-radius: 25px;
   margin: 5px;
   padding-left: clamp(1em, 2vw, 2em);
   padding-right: clamp(1em, 2vw, 2em);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../images/about-background.png");
 }
 .self-introduction {
   color: var(--secondaryColor);
   font-size: var(--bodyFontDesktop);
+  margin-top: 0;
 }
 
 .my-name {
   color: var(--primaryColor);
-  font-size: 40px;
-  font-weight: 400;
+  font-size: 120px;
+  font-weight: 700;
+  line-height: 115px;
+  z-index: 99;
 }
 
-.about p:nth-child(4),
-.about p:nth-child(5) {
+.job-title {
+  font-size: 90px;
+  color: #1e50dd;
+  font-weight: 500;
+  line-height: 85px;
+}
+
+.about p:nth-child(4) {
   margin-top: 1em;
 }
 
@@ -131,6 +144,17 @@ section {
 .about-section-button:hover {
   color: var(--tertiaryColor);
   background-color: var(--secondaryColor);
+}
+
+.icon-wrapper {
+  margin-top: 30px;
+  display: flex;
+  gap: 50px;
+}
+
+.icon-wrapper > * {
+  color: var(--primaryColor);
+  font-size: 80px;
 }
 
 /* WORK */
@@ -207,6 +231,11 @@ section {
   padding: 0px 20px;
   position: sticky;
   top: 5px;
+}
+
+.image-wrapper :nth-child(2),
+.image-wrapper :nth-child(3) {
+  display: none;
 }
 
 .project-image {
@@ -339,6 +368,18 @@ footer a {
     padding-left: clamp(1em, 4vw, 4em);
     padding-right: clamp(1em, 4vw, 4em);
     height: auto;
+  }
+  .my-name {
+    font-size: min(120px, 15vw);
+    line-height: normal;
+  }
+
+  .job-title {
+    font-size: min(90px, 10vw);
+    line-height: normal;
+  }
+  .icon-wrapper > * {
+    font-size: min(90px, 10vw);
   }
 
   /* WORK */
@@ -515,11 +556,11 @@ footer a {
   .self-introduction {
     font-size: var(--bodyFontPhone);
   }
-  .my-name {
-    font-size: 20px;
-  }
   .about-section-button {
     display: none;
+  }
+  .icon-wrapper {
+    margin-bottom: 30px;
   }
 
   /* WORK */
