@@ -1,3 +1,15 @@
+const mediaQueryTablet = window.matchMedia("(max-width: 1200px)");
+const observeElements = document.querySelectorAll(".intersecting-element");
+
+// Move the intersection element to be the first child of the project wrapper
+if (mediaQueryTablet.matches) {
+  observeElements.forEach((el) => {
+    const projectWrapper = el.parentElement;
+    const projectFirstChlid = projectWrapper.firstElementChild;
+    projectWrapper.insertBefore(el, projectFirstChlid);
+  });
+}
+
 let video = document.createElement("video");
 
 video.setAttribute("controls", "");
@@ -32,6 +44,7 @@ const observer = new IntersectionObserver((entries) => {
     const imageID = entry.target.getAttribute("data-img");
 
     if (entry.isIntersecting) {
+      console.log("intersecting");
       projectIntroduction.classList.add("show");
       video.style.display = "none";
       if (!intersectingImageArray.includes(imageID)) {
@@ -64,9 +77,9 @@ const observer = new IntersectionObserver((entries) => {
   });
 });
 
-const observeElements = document.querySelectorAll(".intersecting-element");
 observeElements.forEach((el) => observer.observe(el));
 
+// Change Image to Video and switch Videos
 const imageElements = document.querySelectorAll(".project-image");
 const imageWrapperElements = document.querySelectorAll(".image-wrapper");
 const imageElementsTablet = document.querySelectorAll(".project-image-tablet");
@@ -90,8 +103,6 @@ const videoSrcArray3 = [
   "videos/Project_3/Click.mp4",
   "videos/Project_3/Restart.mp4",
 ];
-
-const mediaQueryTablet = window.matchMedia("(max-width: 1200px)");
 
 for (let i = 0; i < imageElements.length; i++) {
   if (i == 0) {
