@@ -3,7 +3,7 @@
   --secondaryColor: #000000;
   --tertiaryColor: #f6f6f6;
   --bodyFontDesktop: 22px;
-  --bodyFontPhone: 14px;
+  --bodyFontPhone: 18px;
 }
 
 /* Resetting margins and padding */
@@ -53,14 +53,18 @@ nav {
 .nav-link {
   position: sticky;
   top: 45px;
-}
-
-.nav-link {
   gap: 2em;
 }
 
-.nav-icon {
-  gap: 1em;
+.link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.link > i {
+  font-size: 30px;
 }
 
 .nav-link a {
@@ -114,7 +118,6 @@ section {
   font-size: 120px;
   font-weight: 700;
   line-height: 115px;
-  z-index: 99;
 }
 
 .job-title {
@@ -155,6 +158,52 @@ section {
 .icon-wrapper > * {
   color: var(--primaryColor);
   font-size: 80px;
+}
+
+a#scroll-btn {
+  position: relative;
+  height: 3.3em;
+  width: 1.7em;
+  border: 2px solid var(--primaryColor);
+  margin-top: 30px;
+  bottom: 0em;
+  border-radius: 3em;
+}
+a#scroll-btn:before {
+  position: absolute;
+  content: "";
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 1.2em;
+  height: 0.4em;
+  width: 0.3em;
+  background-color: var(--primaryColor);
+  border-radius: 35%;
+  animation: move-down 3s infinite;
+}
+@keyframes move-down {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(1.25em);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+a#scroll-btn:after {
+  position: absolute;
+  content: "SCROLL DOWN";
+  width: 12em;
+  left: -3em;
+  display: block;
+  bottom: -2em;
+  font-size: 1em;
+  color: var(--primaryColor);
+  letter-spacing: 3px;
+  font-weight: 600;
 }
 
 /* WORK */
@@ -367,7 +416,7 @@ footer a {
   .about {
     padding-left: clamp(1em, 4vw, 4em);
     padding-right: clamp(1em, 4vw, 4em);
-    height: auto;
+    height: 85vh;
   }
   .my-name {
     font-size: min(120px, 15vw);
