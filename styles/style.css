@@ -20,6 +20,7 @@
 
 html {
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -197,7 +198,7 @@ a#scroll-btn:after {
   position: absolute;
   content: "SCROLL DOWN";
   width: 12em;
-  left: -3em;
+  left: -3.5em;
   display: block;
   bottom: -2em;
   font-size: 1em;
