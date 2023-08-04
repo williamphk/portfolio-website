@@ -235,6 +235,7 @@ a#scroll-btn:after {
 .project-title {
   color: var(--primaryColor);
   font-size: min(28px, 2.3vw);
+  font-weight: 700;
 }
 
 .project-description-and-live-preview-button {
@@ -379,18 +380,35 @@ a#scroll-btn:after {
 
 /* FOOTER */
 footer {
-  height: 79px;
   font-size: var(--bodyFontDesktop);
-  color: var(--primaryColor);
-  line-height: 79px;
+  background-color: #333333;
+  color: var(--tertiaryColor);
   display: flex;
   justify-content: space-between;
-  padding-left: clamp(1em, 2vw, 2em);
-  padding-right: clamp(1em, 7vw, 7em);
+  padding-left: 10vw;
+  padding-right: 10vw;
+  padding-top: 5em;
+  padding-bottom: 5em;
+}
+
+footer img {
+  width: 45px;
+  height: 45px;
+  margin-top: 13px;
+}
+
+footer div {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+footer div div {
+  font-size: 35px;
 }
 
 footer a {
-  color: var(--primaryColor);
+  color: var(--tertiaryColor);
 }
 
 /* TABLET */
