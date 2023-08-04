@@ -535,6 +535,9 @@ footer a {
   .contact > div {
     font-size: 20px;
   }
+  .contact-wrapper div a i {
+    font-size: min(90px, 10vw);
+  }
 
   /* FOOTER */
   footer {
@@ -549,6 +552,11 @@ footer a {
   footer {
     flex-direction: column;
     line-height: normal;
+    align-items: center;
+    gap: 40px;
+  }
+  footer div {
+    align-items: center;
   }
 }
 
@@ -690,10 +698,8 @@ footer a {
 
   /* FOOTER */
   footer {
-    height: 94px;
     flex-direction: column;
     justify-content: flex-start;
-    gap: 1em;
     font-size: var(--bodyFontPhone);
     line-height: normal;
   }
