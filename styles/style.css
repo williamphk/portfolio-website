@@ -377,6 +377,14 @@ a#scroll-btn:after {
   padding-left: clamp(1em, 2vw, 2em);
   padding-right: clamp(1em, 2vw, 2em);
 }
+.contact-wrapper div {
+  display: flex;
+  gap: 15px;
+}
+.contact-wrapper div a i {
+  font-size: 80px;
+  color: var(--primaryColor);
+}
 
 /* FOOTER */
 footer {
