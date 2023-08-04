@@ -161,6 +161,7 @@ section {
   font-size: 80px;
 }
 
+/* Source: https://codingartistweb.com/2022/01/scroll-down-button-html-css-tutorial/ */
 a#scroll-btn {
   position: relative;
   height: 3.3em;
@@ -198,7 +199,7 @@ a#scroll-btn:after {
   position: absolute;
   content: "SCROLL DOWN";
   width: 12em;
-  left: -3.5em;
+  left: -3.8em;
   display: block;
   bottom: -2em;
   font-size: 1em;
