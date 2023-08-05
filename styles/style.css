@@ -220,6 +220,9 @@ a#scroll-btn:after {
   flex-direction: column;
   align-items: center;
   width: 55%;
+  gap: 40vh;
+  margin-top: 20vh;
+  margin-bottom: 20vh;
 }
 
 .project-wrapper {
@@ -232,7 +235,7 @@ a#scroll-btn:after {
   align-items: start;
   gap: 1em;
   overflow-y: clip;
-  height: 100vh;
+  height: auto;
   justify-content: center;
   width: 100%;
   padding-left: clamp(1em, 2vw, 2em);
