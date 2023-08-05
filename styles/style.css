@@ -478,6 +478,11 @@ footer a {
   }
 
   /* WORK */
+  .project {
+    gap: 2vh;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
   .project-one .project-image {
     display: none;
   }
