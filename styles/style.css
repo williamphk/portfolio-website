@@ -456,7 +456,7 @@ footer a {
   .about {
     padding-left: clamp(1em, 4vw, 4em);
     padding-right: clamp(1em, 4vw, 4em);
-    height: 85vh;
+    padding-bottom: 12%;
   }
   .my-name {
     font-size: min(120px, 15vw);
@@ -466,6 +466,9 @@ footer a {
   .job-title {
     font-size: min(90px, 10vw);
     line-height: normal;
+  }
+  .self-introduction {
+    padding: 0 10%;
   }
   .icon-wrapper > * {
     font-size: min(90px, 10vw);
@@ -561,6 +564,9 @@ footer a {
 
 /* ADDITION BREAKPOINT FOR FOOTER */
 @media only screen and (max-width: 630px) {
+  .icon-wrapper {
+    gap: 14px;
+  }
   footer {
     flex-direction: column;
     line-height: normal;
@@ -652,12 +658,45 @@ footer a {
   /* ABOUT*/
   .self-introduction {
     font-size: var(--bodyFontPhone);
+    padding: 0 3%;
   }
   .about-section-button {
     display: none;
   }
   .icon-wrapper {
     margin-bottom: 30px;
+    gap: 14px;
+  }
+  .icon-wrapper > a {
+    font-size: var(--bodyFontPhone);
+  }
+  a#scroll-btn {
+    height: 2.5em;
+    width: 1.2em;
+    margin-top: 0;
+  }
+  @keyframes move-down {
+    0% {
+      transform: translateY(-0.5em);
+    }
+    50% {
+      transform: translateY(0.5em);
+    }
+    100% {
+      transform: translateY(-0.5em);
+    }
+  }
+  a#scroll-btn:after {
+    position: absolute;
+    content: "SCROLL DOWN";
+    width: 12em;
+    left: -3.6em;
+    display: block;
+    bottom: -2em;
+    font-size: 0.8em;
+    color: var(--primaryColor);
+    letter-spacing: 3px;
+    font-weight: 600;
   }
 
   /* WORK */
